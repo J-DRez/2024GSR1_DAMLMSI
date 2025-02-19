@@ -148,3 +148,9 @@ dist/
 *.wma
 *.ogg
 *.flac
+
+### Font ###
+*.fnt
+*.fon
+*.otf
+*.ttf

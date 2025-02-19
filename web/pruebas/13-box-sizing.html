@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Box Sizing</title>
+        <style>
+            /* En todos los documentos:
+            * {
+                box-sizing: border-box;
+            }
+            */
+            
+            img {
+                width: 500px;
+            }
+            
+            #primero {
+                background: lavender;
+                margin: 20px 0;
+                width: 430px;
+                padding: 20px 30px;
+                border: 5px purple solid;
+            }
+            
+            #segundo {
+                background: lavender;
+                margin: 20px 0;
+                /* Esto se hace para que el padding y el border se adapten a la medida total del width */
+                box-sizing: border-box;
+                width: 500px;
+                padding: 20px 30px;
+                border: 5px purple solid;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h1>Box Sizing</h1>
+        
+        <div id="primero">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis fugiat facilis, itaque, non odio ad adipisci quod provident rem porro libero alias minus asperiores autem qui laboriosam ipsa, deserunt in inventore maxime! Placeat aut quasi accusamus tempore debitis. Repudiandae, veritatis!
+        </div>
+        
+        <img src="madrid5.jpg">
+        
+        <div id="segundo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias sapiente quia magnam aspernatur architecto nemo minus suscipit eaque voluptate dolorum labore porro, illo magni excepturi ab maiores totam recusandae iste.</div>
+        
+    </body>
+</html>

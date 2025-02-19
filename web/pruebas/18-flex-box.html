@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Flex-box</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family: 'Segoe UI', sans-serif;
+            }
+            
+            header {
+                background: lavender;
+                padding: 30px;
+                text-align: center;
+            }
+            .contenedor {
+                max-width: 1000px;
+                margin: 20px auto;
+            }
+            section {
+                background: #eee;
+                margin: 20px 0;
+            }
+            div {
+                background: white;
+                border: 1px solid #ccc;
+                padding: 20px;
+            }
+            
+            
+            /***  FILA 1  ***/
+            .fila1 {
+                display: flex;
+                padding: 20px 0 0 20px;
+                flex-direction: row-reverse;
+            }
+            
+            .fila1 .columna {
+                margin: 0 20px 20px 0;
+            }
+            
+            
+            
+            /***  FILA 2  ***/
+            .fila2 {
+                display: flex;
+                gap: 20px;
+                padding: 20px;
+                justify-content: flex-end;    /*  Alineación horizontal  */
+                align-items: flex-end;        /*  Alineación vertical en  1 linea */
+            }
+            .fila2 .columna {
+                width: 18%;
+                order: 2;
+            }
+            #columna-2-c {
+                width: 28%;
+                align-self: flex-start;       /* Alineación vertical de una columna  */
+                order: 1;
+            }
+            
+            
+            /***  FILA 3 (multilinea) ***/
+            .fila3 {
+                display: flex;
+                gap: 20px;
+                padding: 20px;
+                flex-wrap: wrap;
+                justify-content: center;       /*  Alineación horizontal  */
+                height: 1450px;
+                align-content: space-between;  /*  Alineación vertical en multilinea */
+            }
+            .fila3 .columna {
+                width: 23%;
+               
+            }
+        
+        </style>
+    </head>
+    <body>
+        
+        <header>
+            <h1>Maquetación con Flex Box</h1>
+        </header>
+        
+        <article class="contenedor">
+            
+            <h2>Fila 1</h2>
+            
+            <section class="fila1">
+                <div class="columna">
+                    <h3>A</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus laudantium corporis alias molestiae ratione reiciendis dolores impedit delectus! voluptates cumque ut. Sapiente beatae non quisquam officia ab quaerat, eligendi magni.</p>
+                </div>
+                <div class="columna">
+                    <h3>B</h3>
+                    <p>Ipsa, est, beatae. Veritatis dolore cum non quam excepturi eaque odit modi! Nostrum sapiente vero a minima, assumenda dicta excepturi sequi possimus repudiandae Non corrupti earum, sed inventore libero temporibus, neque maxime asperiores amet cum dolor expedita, quasi sit, rerum debitis perferendis odit quis voluptate. Maxime provident sapiente error accusamus veritatis, harum quibusdam molestias excepturi incidunt quam consectetur qui deserunt dolorum a voluptates quas, nulla dolorem officia quos porro. Incidunt!</p>
+                </div>
+                <div class="columna">
+                    <h3>C</h3>
+                    <p>Necessitatibus eos accusamus odio tenetur ipsam nihil praesentium amet sequi voluptates provident officiis dolor delectus eaque nam deserunt, quidem soluta impedit cupiditate commodi error, animi doloribus qui eveniet laborum aspernatur? velit dolores quam aliquam recusandae accusamus, officiis id neque cupiditate temporibus, exercitationem provident vero.</p>
+                </div>
+                <div class="columna">
+                    <h3>D</h3>
+                    <p>Quaerat aspernatur animi, non quidem quia tempore nulla unde tempora quibusdam aut vitae odit nobis laudantium eius Perspiciatis quis asperiores, excepturi iure sequi Perspiciatis quis asperiores, excepturi iure sequi  ratione sit, maxime voluptatem nam laboriosam quasi provident facilis necessitatibus. Quo maxime velit, ipsam delectus iure et culpa ut facilis optio, tempora ipsa sunt in blanditiis voluptates quos non. Dicta repellendus veniam, ab.</p>
+                </div>
+            </section>
+            
+            
+            <h2>Fila 2</h2>
+            
+            <section class="fila2">
+                <div class="columna">
+                    <h3>A</h3>
+                    <p>Ipsa, est, beatae. Veritatis dolore cum non quam excepturi eaque odit modi! Nostrum sapiente vero a minima, assumenda dicta excepturi sequi possimus repudiandae Non corrupti earum, sed inventore libero temporibus, neque maxime asperiores amet cum dolor expedita, quasi sit, rerum debitis perferendis odit quis voluptate. Maxime provident sapiente error accusamus veritatis, </p>
+                </div>
+                <div class="columna">
+                    <h3>B</h3>
+                    <p>Necessitatibus eos accusamus odio tenetur ipsam nihil praesentium amet sequi voluptates     provident officiis dolor delectus eaque nam deserunt, quidem soluta impedit cupiditate commodi error, animi doloribus qui ationem provident vero.</p>
+                </div>
+                <div class="columna" id="columna-2-c">
+                    <h3>C</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus laudantium corporis alias molestiae ratione reiciendis dolores </p>
+                </div>
+                <div class="columna">
+                    <h3>D</h3>
+                    <p>Quaerat aspernatur animi, non quidem quia tempore nulla unde tempora quibusdam aut vitae odit nobis laudantium eius Perspiciatis quis asperiores, excepturi iure sequi Perspiciatis quis asperiores, excepturi iure sequi  ratione sit, maxime voluptatem nam laboriosam quasi provident </p>
+                </div>
+            </section>
+            
+            <h2>Fila 3</h2>
+            
+            <section class="fila3">
+                <div class="columna">
+                    <h3>A</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus laudantium corporis alias molestiae ratione reiciendis dolores impedit delectus! voluptates cumque ut. Sapiente beatae non quisquam officia ab quaerat, eligendi magni.</p>
+                </div>
+                <div class="columna">
+                    <h3>B</h3>
+                    <p>Ipsa, est, beatae. Veritatis dolore cum non quam excepturi eaque odit modi! Nostrum sapiente vero a minima, assumenda dicta excepturi sequi possimus repudiandae Non corrupti earum, sed inventore libero temporibus, neque maxime asperiores amet cum dolor expedita, quasi sit, rerum debitis perferendis odit quis voluptate. Maxime provident sapiente error accusamus veritatis, harum quibusdam molestias excepturi incidunt quam consectetur qui deserunt dolorum a voluptates quas, nulla dolorem officia quos porro. Incidunt!</p>
+                </div>
+                <div class="columna">
+                    <h3>C</h3>
+                    <p>Necessitatibus eos accusamus odio tenetur ipsam nihil praesentium amet sequi voluptates provident officiis dolor delectus eaque nam deserunt, quidem soluta impedit cupiditate commodi error, animi doloribus qui eveniet laborum aspernatur? velit dolores quam aliquam recusandae accusamus, officiis id neque cupiditate temporibus, exercitationem provident vero.</p>
+                </div>
+                <div class="columna">
+                    <h3>D</h3>
+                    <p>Quaerat aspernatur animi, non quidem quia tempore nulla unde tempora quibusdam aut vitae odit nobis laudantium eius Perspiciatis quis asperiores, excepturi iure sequi Perspiciatis quis asperiores, excepturi iure sequi  ratione sit, maxime voluptatem nam laboriosam quasi provident facilis necessitatibus. Quo maxime velit, ipsam delectus iure et culpa ut facilis optio, tempora ipsa sunt in blanditiis voluptates quos non. Dicta repellendus veniam, ab.</p>
+                </div>
+                
+                <div class="columna">
+                    <h3>E</h3>
+                    <p>Ipsa, est, beatae. Veritatis dolore cum non quam excepturi eaque odit modi! Nostrum sapiente vero a minima, assumenda dicta excepturi sequi possimus repudiandae Non corrupti earum, sed inventore libero temporibus, neque maxime asperiores amet cum dolor expedita, quasi sit, rerum debitis perferendis odit quis voluptate. Maxime provident sapiente error accusamus veritatis, harum quibusdam molestias excepturi incidunt quam consectetur qui deserunt dolorum a voluptates quas, nulla dolorem officia quos porro. Incidunt!</p>
+                </div>
+                <div class="columna">
+                    <h3>F</h3>
+                    <p>Necessitatibus eos accusamus odio tenetur ipsam nihil praesentium amet sequi voluptates provident officiis dolor delectus eaque nam deserunt, quidem soluta impedit cupiditate commodi error, animi doloribus qui eveniet laborum aspernatur? velit dolores quam aliquam recusandae accusamus, officiis id neque cupiditate temporibus, exercitationem provident vero.</p>
+                </div>
+            </section>
+            
+            
+            
+        </article>
+        
+    </body>
+</html>

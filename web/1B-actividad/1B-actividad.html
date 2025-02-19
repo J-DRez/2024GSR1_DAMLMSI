@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Actividad1B</title>
+        <!-- Julio Alberto Díaz Rodríguez -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600&family=Merriweather:wght@400;700;900&display=swap"
+            rel="stylesheet" />
+
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            
+            body {
+                background: white;
+                margin: 0;
+            }
+
+            #logo {
+                height: 35px;
+            }
+
+            .topinfo {
+                width: 1000px;
+                margin: auto;
+                justify-content: space-between;
+                align-items: center;
+                display: flex;
+                padding: 10px;
+                margin-top: 10px;
+                margin-bottom: 60px;
+            }
+
+            .topinfo nav a {
+                margin-left: 50px;
+                margin-right: 15px;
+                text-decoration: none;
+                color: black;
+                font-size: 0.85rem;
+                font-family: Lato, serif;
+                font-weight: 600;
+            }
+
+            #start {
+                background-color: #fb505d;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+                font-family: Lato, serif;
+                font-weight: 700;
+                margin-left: 160px;
+                margin-right: 0;
+            }
+
+            h1 {
+                font-family: Merriweather, sans-serif;
+                font-weight: 800;
+                font-size: 4.5rem;
+                margin: 0;
+                color: black;
+            }
+
+            h2 {
+                font-family: Merriweather, sans-serif;
+                font-weight: 800;
+                font-size: 1.6rem;
+                margin: 20px;
+                color: black;
+            }
+
+            h3 {
+                font-family: Lato, serif;
+                font-weight: 400;
+                font-size: 1.2rem;
+                margin: 0;
+                color: black;
+            }
+
+            .sec1 p,
+            .sec2 p {
+                font-family: Lato, serif;
+                font-weight: 300;
+                font-size: 1rem;
+                margin-bottom: 40px;
+                color: black;
+            }
+
+            .sec3 p {
+                font-family: Lato, serif;
+                font-weight: 300;
+                font-size: 0.85rem;
+                margin-top: 10px;
+                color: black;
+            }
+
+            .sec1,
+            .sec3 {
+                display: flex;
+            }
+
+            .sec2 {
+                width: 650px;
+                text-align: center;
+                padding: 20px;
+            }
+            
+            input {
+                padding: 15px;
+                font-size: 16px;
+                width: 250px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .sec1 button {
+                background-color: #fb505d;
+                color: white;
+                padding: 15px 20px;
+                border-radius: 5px;
+                border-style: none;
+                text-decoration: none;
+                font-family: "Lato", serif;
+                font-weight: 800;
+            }
+
+            section {
+                width: 1000px;
+                margin: auto;
+            }
+
+            #hero {
+                align-items: center;
+                width: 450px;
+            }
+
+            .mitad {
+                width: 50%;
+                padding: 20px;
+            }
+
+            .enrichment,
+            .computer,
+            .text,
+            .transcription {
+                width: 25%;
+                height: 25%;
+                padding: 20px;
+            }
+
+            .signup {
+                background-size: cover;
+                background-image: url(fondo.png);
+                height: 400px;
+                width: 1500px;
+                margin: auto;
+                text-align: center;
+                align-items: center;                
+                margin-top: 80px;
+                margin-bottom: 80px;
+                padding: 100px;
+            }
+            
+            .signup p {
+                font-family: Lato, serif;
+                font-size: 1.5rem;
+                font-weight: 400;
+                color: white;
+            }
+
+            .signup h2 {
+                font-family: Merriweather, sans-serif;
+                font-weight: 900;
+                font-size: 3rem;
+                color: white;
+            }
+            .signup button {
+                background-color: white;
+                color: #fb505d;
+                padding: 15px 30px 15px 30px;
+                border-radius: 5px;
+                border-style: none;
+                text-decoration: none;
+                font-family: "Lato", serif;
+                font-weight: 800;
+                margin-bottom: 50px;
+                font-size: 15px;
+            }
+
+            footer {
+                align-items: center;
+                text-align: center;
+            }
+
+            footer nav a {
+                margin-right: 10px;
+                text-decoration: none;
+                color: black;
+                font-size: 0.85rem;
+                font-family: Lato, serif;
+                font-weight: 300;
+            }
+
+            .redes img {
+                margin-right: 20px;
+                height: 20px;
+            }
+
+            .copyright {
+                color: black;
+                font-size: 0.85rem;
+                font-family: Lato, serif;
+                font-weight: 300;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div class="topinfo">
+                <img id="logo" src="apres-logo.c49d8f08.svg" alt="apres-logo" />
+
+                <nav>
+                    <a href="#">Why Apres?</a>
+                    <a href="#">What you can do▾</a>
+                    <a href="#">Pricing</a>
+                    <a href="#">Resources▾</a>
+                    <a id="start" href="#">GET STARTED</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="sec1">
+                <div class="mitad">
+                    <h1>Automation</h1>
+                    <h1>For Humans</h1>
+                    <p>Build human intelligent automation into your workflow without writing any code.</p>
+                    <input type="text" placeholder="Email adress" /> <button>GET STARTED</button>
+                </div>
+                <div class="mitad">
+                    <img id="hero" src="hero-blank.72a87926.png" alt="hero" />
+                </div>
+            </section>
+            <section class="sec2">
+                <h2>What you can do with Apres</h2>
+                <p>
+                    Apres is where you give you data superpowers, integrated to fit your team's needs, and built to let
+                    anyone unlock the potential or their data.
+                </p>
+            </section>
+            <section class="sec3">
+                <div class="enrichment">
+                    <img src="apres-1.png" alt="Data enrichment" />
+                    <h3>Data Enrichment</h3>
+                    <p>Enrich your current database with web research, cleaning, de-duplication and more.</p>
+                </div>
+                <div class="computer">
+                    <img src="apres-2.png" alt="computer vision" />
+                    <h3>Computer Vision</h3>
+                    <p>Use computer vision processing to capture data from images, PDFs, and more.</p>
+                </div>
+                <div class="text">
+                    <img src="apres-3.png" alt="text analisis" />
+                    <h3>Text Analisis</h3>
+                    <p>Define and tag conversations, build dictionaries for bots, summarize articles and more.</p>
+                </div>
+                <div class="transcription">
+                    <img src="apres-4.png" alt="transcription" />
+                    <h3>Transcription</h3>
+                    <p>Get the data you need from rich media files, returned on-demand with 95% accuracy.</p>
+                </div>
+            </section>
+            <div class="signup">
+                <h2>Automate yourself</h2>
+                <p>And your business. Two things we can get behind.</p>
+                <button>SIGN UP</button>
+            </div>
+        </main>
+
+        <footer>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Pricing</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+            </nav>
+            <p class="redes">
+                <a href="#"><img src="facebook.svg" alt="facebook" /></a>
+                <a href="#"><img src="twitter.svg" alt="twitter" /></a>
+                <a href="#"><img src="medium.svg" alt="medium" /></a>
+                <a href="#"><img src="mail.svg" alt="email" /></a>
+            </p>
+            <p class="copyright">Copyright © 2018 Apres, Inc. All rights reserved.</p>
+        </footer>
+    </body>
+</html>

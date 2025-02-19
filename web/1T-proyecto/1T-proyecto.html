@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Julio Alberto Díaz Rodríguez</title>
+
+        <link rel="icon" href="favicon-16x16.png" type="image/x-icon" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Germania+One&family=Nunito+Sans:ital,opsz,wdth,wght@0,6..12,100.1,200..1000;1,6..12,100.1,200..1000&display=swap"
+            rel="stylesheet" />
+
+        <style>
+            * {
+                box-sizing: border-box;
+                scroll-behavior: smooth;
+            }
+
+            body {
+                background-color: navajowhite;
+                background-image: url(madera.jpeg);
+                background-blend-mode: multiply; /* Efecto de imagen para que aproveche el color de debajo */
+                margin: 0;
+                padding: 0;
+                /* Estos parámetros son para la posición del background */
+                background-position: center;
+                background-size: cover;
+                background-repeat: repeat-y;
+            }
+
+            header {
+                position: fixed; /* Esto mantiene el header fijo en la parte superior */
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100px;
+                background-color: rgba(0, 0, 0, 0);
+                color: white;
+                z-index: 1000;
+                transition: background-color 0.6s ease; /* Velocidad de transición de transparente a algo opaco */
+                display: flex;
+                text-align: center;
+                align-items: center;
+            }
+
+            /* Cuando se hace scroll, estos son los parametros que afectan al header */
+            header.scrolled {
+                background-color: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(6px);
+            }
+
+            #logo {
+                width: 20%;
+                padding: 10px;
+                max-width: 200px;
+                cursor: pointer;
+                transition: transform 0.2s ease; /* Velocidad de tranformación del tamaño del logo */
+            }
+
+            #logo2 {
+                width: 20%;
+                padding: 10px;
+                max-width: 200px;
+                opacity: 0;
+            }
+
+            /* Tamaño aumentado del logo al poner el ratón por encima */
+            #logo:hover {
+                transform: scale(1.05);
+            }
+
+            header a {
+                text-decoration: none;
+                font-family: "Nunito Sans", serif;
+                font-style: normal;
+                font-variation-settings: "wdth" 100;
+                font-weight: 800;
+                font-size: 1.2rem;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 5px;
+            }
+
+            /* Color y efecto de los link al poner el ratón por encima */
+            header a:hover {
+                color: navajowhite;
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+
+            header nav {
+                width: 80%;
+            }
+
+            main {
+                width: 55%;
+                margin: 100px auto 35px auto;
+                background-color: rgba(0, 0, 0, 0.75);
+                color: white;
+                border-radius: 0 0 20px 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #poster {
+                transition: transform 0.2s ease;
+                width: 100%;
+                margin: 0;
+            }
+
+            #poster:hover {
+                transform: scale(1.005);
+            }
+
+            h1 {
+                font-family: "Germania One", system-ui;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 3.5rem;
+                padding: 30px;
+                text-align: center;
+            }
+
+            h2 {
+                font-family: "Nunito Sans", serif;
+                font-style: normal;
+                font-variation-settings: "wdth" 75;
+                font-weight: 700;
+                font-size: 2rem;
+                text-align: center;
+                background-color: navajowhite;
+                color: black;
+                border-radius: 25px;
+                margin: 10px;
+            }
+
+            p {
+                font-family: "Nunito Sans", serif;
+                font-style: normal;
+                font-variation-settings: "wdth" 100;
+                font-weight: 400;
+                font-size: 1rem;
+                padding: 10px;
+                margin: 0 30px;
+            }
+
+            .contenedor-mapas h3 {
+                font-family: "Nunito Sans", serif;
+                font-style: normal;
+                font-variation-settings: "wdth" 75;
+                font-weight: 600;
+                font-size: 1.4rem;
+                text-align: center;
+                background-color: navajowhite;
+                color: black;
+                border-radius: 20px;
+                width: 94%;
+                margin: 3%;
+            }
+
+            .contenedor-mapas {
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+            }
+
+            .contenedor-mapas div {
+                flex: 1; /* Al haber 2 div, esto hace que cada uno sea el 50% */
+                text-align: center;
+            }
+
+            .contenedor-mapas iframe {
+                width: 80%;
+                margin: 5%;
+                height: 280px;
+                border-radius: 20px;
+                border: none;
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+
+            article {
+                scroll-margin-top: 100px;
+                width: 100%;
+            }
+
+            #lugar,
+            #spotify {
+                margin-top: 50px;
+            }
+
+            #reproductor {
+                border: none;
+                margin: 50px auto;
+                width: 80%;
+                max-width: 600px;
+                height: 400px;
+                display: block;
+            }
+
+            #calendario a,
+            #inscripcion a {
+                color: mediumpurple;
+                text-decoration: none;
+            }
+
+            #calendario a:hover,
+            #inscripcion a:hover {
+                color: navajowhite;
+            }
+
+            footer {
+                height: 70px;
+                background-color: black;
+                color: white;
+                display: flex;
+                text-align: center;
+                align-items: center;
+            }
+
+            footer nav {
+                width: 100%;
+                margin: auto;
+            }
+
+            footer a {
+                text-decoration: none;
+                font-family: "Nunito Sans", serif;
+                font-style: normal;
+                font-variation-settings: "wdth" 100;
+                font-weight: 100;
+                font-size: 0.8rem;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 5px;
+            }
+
+            footer a:hover {
+                color: navajowhite;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header id="main-header">
+            <img src="bbmt_logo.png" alt="baby_logo" id="logo" />
+
+            <nav>
+                <a href="#descripcion">DESCRIPCIÓN</a>
+                <a href="#calendario">CALENDARIO</a>
+                <a href="#participantes">PARTICIPANTES</a>
+                <a href="#inscripcion">INSCRIPCIÓN</a>
+                <a href="#lugar">UBICACIÓN</a>
+                <a href="#spotify">SPOTIFY</a>
+            </nav>
+
+            <img src="bbmt_logo.png" alt="baby_logo" id="logo2" />
+        </header>
+        <main>
+            <a href="https://www.resurrectionfest.es/media/RR25-Babymetal-Post-4.5-1.jpg"
+                ><img src="baby_poster.jpg" alt="poster" id="poster"
+            /></a>
+            <section>
+                <article id="descripcion">
+                    <h1>¡BABYMETAL en Madrid y Barcelona con POPPY y BAMBIE THUG!</h1>
+                    <p>
+                        Nos complace anunciar que la nueva gira de nuestras queridas Babymetal pasarán por Madrid y
+                        Barcelona en mayo de 2025 con un pack de gran calidad: nada más y nada menos que la grandísima
+                        Poppy y Bambie Thug, a quien ya disfrutamos recientemente en salas.<br /><br />
+                        Babymetal es una de las bandas más revolucionarias de los últimos años. Las tres japonesas
+                        llevan desde 2010 haciendo del metal y j-pop una criatura única en la que también hay cabida
+                        para bailes y coreografías perfectamente ejecutadas, convirtiendo su estilo kawaii en un
+                        fenómeno de masas que ha tenido impacto en todo el mundo y que les ha permitido colaborar con
+                        artistas de la talla de Bring Me The Horizon, Arch Enemy, Dragonforce, Electric Callboy, Lil Uzi
+                        Vert, Rob Halford de Judas Priest o como teloneras de Lady Gaga.<br /><br />Las incansables
+                        tokiotas no vendrán solas: la estadounidense Poppy, responsable de borrar las líneas entre el
+                        pop, metal y la electrónica con su inconfundible estilo vanguardista dulce y oscuro, y Bambie
+                        Thug, con su estilo desafiante y único, apoyarán el paso de Su-metal, Moametal y Momometal por
+                        nuestro país.
+                    </p>
+                </article>
+                <article id="calendario">
+                    <p>
+                        Tras su primera gira por España y su arrasador paso por el Resurrection Fest, llega esta nueva
+                        gira que les llevará una vez más a lo más alto de la escena metal actual. Anota estas fechas:<br /><br />
+
+                        📅 25 de mayo de 2025, Madrid, Palacio Vistalegre<br />
+                        📅 26 de mayo de 2025, Barcelona, Poble Espanyol<br />
+                    </p>
+                </article>
+                <article id="participantes">
+                    <p>Artista principal: Babymetal Teloneros: Poppy y Bambie Thug</p>
+                </article>
+                <article id="inscripcion">
+                    <p>
+                        ¡NO TE PIERDAS ESTE EVENTAZO ÚNICO!<br /><br />
+                        🎟️ Preventa para compradores de Resurrection Fest 2025: jueves 24 de Noviembre a las 10:00h<br />
+                        🎫 Venta general: viernes 25 de Noviembre a las 10:00h en <a href="#">route.resurrectionfest.es</a><br /><br />
+                        Acreditaciones de prensa: próximamente. Para dudas:
+                        <a href="#">acreditaciones@bringthenoise.events</a><br /><br />
+
+                        Problemas con la compra: <a href="#">tickets@resurrectionfest.es</a><br /><br />
+
+                        Eventos de Facebook: Madrid – Barcelona
+                    </p>
+                </article>
+                <article id="lugar">
+                    <h2>COMO LLEGAR</h2>
+                    <div class="contenedor-mapas">
+                        <div>
+                            <h3>Madrid</h3>
+                            <iframe
+                                title="mapaMadrid"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.0310800141497!2d-3.741132859004151!3d40.386003771563395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42278957e6bd9d%3A0x348b7bfd1cd876fb!2sPalacio%20Vistalegre%20Arena!5e0!3m2!1ses!2ses!4v1734084443891!5m2!1ses!2ses"
+                                width="600"
+                                height="450"
+                                style="border: 0"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div>
+                            <h3>Barcelona</h3>
+                            <iframe
+                                title="mapaBarcelona"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.2428379490584!2d2.1457036410366945!3d41.36880847142174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2776a5b6227%3A0xb0c05232453a54a5!2sPoble%20Espanyol%20de%20Barcelona!5e0!3m2!1ses!2ses!4v1734084475636!5m2!1ses!2ses"
+                                width="600"
+                                height="450"
+                                style="border: 0"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </article>
+                <article id="spotify">
+                    <h2>LISTA OFICIAL DE SPOTIFY DE LA GIRA</h2>
+                    <iframe
+                        id="reproductor"
+                        title="Spotify"
+                        style="border-radius: 12px"
+                        src="https://open.spotify.com/embed/playlist/2T3MRdQvcQPbXIsxumNt4G?utm_source=generator&theme=0"
+                        width="100%"
+                        height="352"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <nav>
+                <a href="#">CONTACTO</a>
+                <a href="#">QUIENES SOMOS</a>
+                <a href="#">FAQ</a>
+                <a href="#">COPYRIGHT</a>
+            </nav>
+        </footer>
+        
+        <script>
+            /* Esto es lo que hace que al hacer click al logo, este haga scroll hasta la parte superior de la web */
+            const logo = document.getElementById("logo");
+            logo.addEventListener("click", () => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+            
+            /* Esto hace que al hacer scroll y dejar de estar en la posición 0 vertical, el header adquiera otras propiedades que hemos dado en el "style" */
+            const header = document.getElementById("main-header");
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 0) {
+                    header.classList.add("scrolled");
+                } else {
+                    header.classList.remove("scrolled");
+                }
+            });
+        </script>
+    </body>
+</html>
