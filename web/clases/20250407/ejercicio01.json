@@ -1,0 +1,72 @@
+{
+    "pedidosOnline":[
+        {
+            "id": 1,
+            "fechaPedido": "2023-10-01",
+            "cliente": {
+                "nombre": "Juan Pérez",
+                "email": "juanperez@email.com",
+                "direccion": {
+                    "calle": "Av. Libertador",
+                    "ciudad": "Murcia",
+                    "codigoPostal": "30001"
+                }
+            },
+            "productos": [
+                {
+                    "id": 101,
+                    "nombre": "Laptop",
+                    "cantidad": 1,
+                    "precioUnitario": 1200.00
+                },
+                {
+                    "id": 102,
+                    "nombre": "Mouse",
+                    "cantidad": 2,
+                    "precioUnitario": 25.00
+                }
+            ],
+            "envioUrgente": true,
+            "estadoPedido":[
+                "pendiente",
+                "enviado",
+                "entregado",
+                null
+            ]
+        },
+        {
+            "id": 2,
+            "fechaPedido": "2023-10-02",
+            "cliente": {
+                "nombre": "Ana Gómez",
+                "email": "anagomez@email.com",
+                "direccion": {
+                    "calle": "Calle Mayor",
+                    "ciudad": "Madrid",
+                    "codigoPostal": "28001"
+                }
+            },
+            "productos": [
+                {
+                    "id": 103,
+                    "nombre": "Teclado",
+                    "cantidad": 1,
+                    "precioUnitario": 50.00
+                },
+                {
+                    "id": 104,
+                    "nombre": "Monitor",
+                    "cantidad": 1,
+                    "precioUnitario": 300.00
+                }
+            ],
+            "envioUrgente": false,
+            "estadoPedido":[
+                "pendiente",
+                "enviado",
+                "entregado",
+                null
+            ]
+        }
+    ]
+}

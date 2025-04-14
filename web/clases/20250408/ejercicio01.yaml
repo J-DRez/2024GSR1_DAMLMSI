@@ -1,0 +1,21 @@
+nombreConcierto: Concierto de Primavera
+fecha: 2025-04-08
+ubicacion:
+  ciudad: Madrid
+  lugar: Auditorio Nacional
+precio: 50.00
+gratuito: false
+categoriasMusica:
+  - rock
+  - pop
+  - metal
+  - jazz
+artistas:
+  - nombre: Metallica
+    estiloMusical: Metal
+  - nombre: La Oreja de Van Gogh
+    estiloMusical: Pop
+estadoEvento:
+  - pendiente
+  - confirmado
+  - null

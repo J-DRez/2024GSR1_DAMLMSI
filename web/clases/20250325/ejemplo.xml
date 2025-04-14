@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+    <videoclub>
+        <pelicula año = "2000">
+            <titulo>El señor de los anillos</titulo>
+            <genero>Fantasía</genero>
+        </pelicula>
+        <pelicula año = "2001">
+            <titulo>Harry Potter</titulo>
+            <genero>Fantasía</genero>
+        </pelicula>
+        <pelicula año = "2002">
+            <titulo>Spiderman</titulo>
+            <genero>Ciencia Ficción</genero>
+        </pelicula>
+        <pelicula año = "2003">
+            <titulo>Matrix</titulo>
+            <genero>Ciencia Ficción</genero>
+        </pelicula>
+    </videoclub>
