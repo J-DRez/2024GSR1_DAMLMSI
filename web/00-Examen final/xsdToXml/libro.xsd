@@ -1,0 +1,19 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="libro">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="titulo" type="xs:string"/>
+                <xs:element name="autor" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="genero">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="ficcion"/>
+                        <xs:enumeration value="no-ficcion"/>
+                        <xs:enumeration value="poesia"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang = es>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de precios</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="contenedor">
+        <h2>Calculadora de precios</h2>
+        
+        <label>Producto 1 (€):<input type='number' id='precio1'></label>
+        <label>Producto 2 (€):<input type='number' id='precio2'></label>
+        
+        <button id="calc" onclick="precioTotal()">Calcular</button>
+        <button id="limp" onclick="limpiarCampos()">Limpiar</button>
+        
+        <div id="resultado"></div>
+    </div>
+</body>
+</html>

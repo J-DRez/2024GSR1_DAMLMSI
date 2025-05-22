@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Precios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Calculadora de Precios</h2>
+
+        <label>Producto 1 (€): <input type="number" id="precio1"></label>
+        <label>Producto 2 (€): <input type="number" id="precio2"></label>
+
+        <button onclick="calcularTotal()">Calcular Total</button>
+        <button onclick="limpiarCampos()">Limpiar</button>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
